@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SearchViewController : UIViewController
+@interface SearchViewController : UIViewController<UISearchBarDelegate, UITableViewDelegate,UITableViewDataSource>
+
 
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (strong, nonatomic) NSMutableArray *studentList;
+@property (strong, nonatomic) NSString *queryString;
 
 @end
