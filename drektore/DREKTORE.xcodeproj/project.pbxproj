@@ -14,6 +14,8 @@
 		42470F941CB23A8900BA9F95 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42470F931CB23A8900BA9F95 /* Images.xcassets */; };
 		42470F971CB23A8900BA9F95 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42470F951CB23A8900BA9F95 /* LaunchScreen.xib */; };
 		42470FA31CB23A8900BA9F95 /* DREKTORETests.m in Sources */ = {isa = PBXBuildFile; fileRef = 42470FA21CB23A8900BA9F95 /* DREKTORETests.m */; };
+		4292E5381CB595C100AFD87E /* StudentInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4292E5371CB595C100AFD87E /* StudentInfoCell.m */; };
+		42B30FD71CB6196C006A1293 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B30FD61CB6196C006A1293 /* placeholder.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,9 @@
 		42470F9C1CB23A8900BA9F95 /* DREKTORETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DREKTORETests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		42470FA11CB23A8900BA9F95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42470FA21CB23A8900BA9F95 /* DREKTORETests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DREKTORETests.m; sourceTree = "<group>"; };
+		4292E5361CB595C100AFD87E /* StudentInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentInfoCell.h; sourceTree = "<group>"; };
+		4292E5371CB595C100AFD87E /* StudentInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentInfoCell.m; sourceTree = "<group>"; };
+		42B30FD61CB6196C006A1293 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +86,7 @@
 		42470F851CB23A8900BA9F95 /* DREKTORE */ = {
 			isa = PBXGroup;
 			children = (
+				42B30FD61CB6196C006A1293 /* placeholder.png */,
 				42470F8A1CB23A8900BA9F95 /* AppDelegate.h */,
 				42470F8B1CB23A8900BA9F95 /* AppDelegate.m */,
 				42470F8D1CB23A8900BA9F95 /* SearchViewController.h */,
@@ -89,6 +95,8 @@
 				42470F931CB23A8900BA9F95 /* Images.xcassets */,
 				42470F951CB23A8900BA9F95 /* LaunchScreen.xib */,
 				42470F861CB23A8900BA9F95 /* Supporting Files */,
+				4292E5361CB595C100AFD87E /* StudentInfoCell.h */,
+				4292E5371CB595C100AFD87E /* StudentInfoCell.m */,
 			);
 			path = DREKTORE;
 			sourceTree = "<group>";
@@ -200,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				42470F921CB23A8900BA9F95 /* Main.storyboard in Resources */,
+				42B30FD71CB6196C006A1293 /* placeholder.png in Resources */,
 				42470F971CB23A8900BA9F95 /* LaunchScreen.xib in Resources */,
 				42470F941CB23A8900BA9F95 /* Images.xcassets in Resources */,
 			);
@@ -222,6 +231,7 @@
 				42470F8F1CB23A8900BA9F95 /* SearchViewController.m in Sources */,
 				42470F8C1CB23A8900BA9F95 /* AppDelegate.m in Sources */,
 				42470F891CB23A8900BA9F95 /* main.m in Sources */,
+				4292E5381CB595C100AFD87E /* StudentInfoCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,7 @@
 //
 
 #import "SearchViewController.h"
+#import "StudentInfoCell.h"
 #define studentSearchRootURL @"http://192.168.1.11:8080/v1.0/student/name/"
 
 
@@ -21,7 +22,11 @@
     // Do any additional setup after loading the view, typically from a nib.
     self.searchBar.delegate = self;
     self.searchBar.showsCancelButton = YES;
-    
+    //self.studentTable.delegate = self;
+    //self.studentTable.dataSource = self;
+    self.studentTable.estimatedRowHeight = 85.0;
+    self.studentTable.rowHeight = UITableViewAutomaticDimension;
+    [self.studentTable reloadData];
     
 }
 - (void)searchBarCancelButtonClicked:(UISearchBar *) searchBar {
@@ -89,7 +94,6 @@
                      options:NSJSONReadingAllowFragments
                      error:&error];
     
-    
     if (jsonObject != nil && error == nil){
         NSArray *studentArray = [NSJSONSerialization JSONObjectWithData:[myData dataUsingEncoding:NSUTF8StringEncoding]
                                                               options:0 error:NULL];
@@ -103,7 +107,7 @@
                 
             }
             else{
-                /////////////////[self.movieTable reloadData];
+                [self.studentTable reloadData];
                 
             }
         });
@@ -112,6 +116,46 @@
         //TODO display error
     }
 }
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.studentList.count;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return UITableViewAutomaticDimension;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *identifier = @"StudentInfoCell";
+    StudentInfoCell *cell = [self.studentTable dequeueReusableCellWithIdentifier:identifier];
+    [cell setSelectionStyle:UITableViewCellSelectionStyleDefault];
+    if(self.studentList.count > 0){
+        NSMutableDictionary *studentInfo = [self.studentList objectAtIndex:indexPath.row];
+        cell.studentPhoto.image = [UIImage imageNamed:@"placeholder.png"];
+        cell.studentName.text = studentInfo[@"firstName"];
+        
+        cell.studentEmail.text = studentInfo[@"email"];
+        cell.studentPhone.text = @"425-425-4255";
+        dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul);
+        // loading images asynchronously.
+        dispatch_async(queue, ^{
+//            NSData *data = [NSData dataWithContentsOfURL : imageURL];
+//            
+//            dispatch_async(dispatch_get_main_queue(), ^{
+//                
+//                cell.postImageView.image = [UIImage imageWithData:data];
+//                [cell setNeedsLayout];
+//            });
+        });
+    }
+    [cell layoutIfNeeded];
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+
+}
+
 -(void)showAlert: (NSString *) title withMessage:(NSString*) message preferredStyle:(UIAlertControllerStyle)preferredStyle
 {
     

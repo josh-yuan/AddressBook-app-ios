@@ -14,5 +14,6 @@
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (strong, nonatomic) NSMutableArray *studentList;
 @property (strong, nonatomic) NSString *queryString;
+@property (weak, nonatomic) IBOutlet UITableView *studentTable;
 
 @end
