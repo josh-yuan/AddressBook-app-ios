@@ -37,22 +37,26 @@
                                             <rect key="frame" x="0.0" y="0.0" width="326" height="92.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vec-Na-fZF">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vec-Na-fZF">
                                                     <rect key="frame" x="10" y="10" width="84" height="72"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" priority="900" constant="72" id="Kzg-ha-gLt"/>
+                                                        <constraint firstAttribute="width" priority="900" constant="84" id="zFQ-xJ-hQA"/>
+                                                    </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Student email" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iE7-I5-D6Y">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Student email" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iE7-I5-D6Y">
                                                     <rect key="frame" x="101" y="35" width="217" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Student phone" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Olh-xO-SRY">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Student phone" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Olh-xO-SRY">
                                                     <rect key="frame" x="101" y="61" width="217" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Student name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AhB-sd-OBa">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Student name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AhB-sd-OBa">
                                                     <rect key="frame" x="101" y="8" width="217" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -60,21 +64,20 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="vec-Na-fZF" firstAttribute="top" secondItem="Ob9-VF-2Vr" secondAttribute="topMargin" constant="2" id="61U-tY-qLi"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="vec-Na-fZF" secondAttribute="bottom" constant="2.5" id="GKR-WQ-fvp"/>
-                                                <constraint firstItem="AhB-sd-OBa" firstAttribute="leading" secondItem="vec-Na-fZF" secondAttribute="trailing" constant="7" id="LV1-J4-gaM"/>
-                                                <constraint firstItem="Olh-xO-SRY" firstAttribute="leading" secondItem="vec-Na-fZF" secondAttribute="trailing" constant="7" id="LnS-2Y-A9h"/>
-                                                <constraint firstItem="Olh-xO-SRY" firstAttribute="top" secondItem="iE7-I5-D6Y" secondAttribute="bottom" constant="5" id="UYp-NE-Evq"/>
-                                                <constraint firstItem="iE7-I5-D6Y" firstAttribute="top" secondItem="AhB-sd-OBa" secondAttribute="bottom" constant="6" id="WjL-RW-uvC"/>
-                                                <constraint firstItem="iE7-I5-D6Y" firstAttribute="leading" secondItem="vec-Na-fZF" secondAttribute="trailing" constant="7" id="XeF-bK-Vwc"/>
-                                                <constraint firstItem="AhB-sd-OBa" firstAttribute="top" secondItem="Ob9-VF-2Vr" secondAttribute="topMargin" id="dJb-lg-Tmf"/>
-                                                <constraint firstItem="iE7-I5-D6Y" firstAttribute="trailing" secondItem="Ob9-VF-2Vr" secondAttribute="trailingMargin" id="eeV-Jm-1V8"/>
-                                                <constraint firstItem="Olh-xO-SRY" firstAttribute="top" secondItem="iE7-I5-D6Y" secondAttribute="bottom" constant="5" id="f3x-RH-XSB"/>
-                                                <constraint firstItem="iE7-I5-D6Y" firstAttribute="top" secondItem="AhB-sd-OBa" secondAttribute="bottom" constant="6" id="hw3-y0-96q"/>
-                                                <constraint firstItem="Olh-xO-SRY" firstAttribute="trailing" secondItem="Ob9-VF-2Vr" secondAttribute="trailingMargin" id="jQ3-LM-zOU"/>
-                                                <constraint firstItem="AhB-sd-OBa" firstAttribute="trailing" secondItem="Ob9-VF-2Vr" secondAttribute="trailingMargin" id="vdf-rX-k57"/>
-                                                <constraint firstItem="Olh-xO-SRY" firstAttribute="leading" secondItem="vec-Na-fZF" secondAttribute="trailing" constant="7" id="yMt-Kc-3hF"/>
-                                                <constraint firstItem="vec-Na-fZF" firstAttribute="leading" secondItem="Ob9-VF-2Vr" secondAttribute="leadingMargin" constant="2" id="zTO-BW-9xR"/>
+                                                <constraint firstItem="iE7-I5-D6Y" firstAttribute="trailing" secondItem="Ob9-VF-2Vr" secondAttribute="trailingMargin" id="23M-Qa-2HD"/>
+                                                <constraint firstItem="vec-Na-fZF" firstAttribute="top" secondItem="Ob9-VF-2Vr" secondAttribute="topMargin" constant="2" id="2YF-Sg-TL0"/>
+                                                <constraint firstItem="iE7-I5-D6Y" firstAttribute="leading" secondItem="vec-Na-fZF" secondAttribute="trailing" constant="7" id="75Q-pZ-ba0"/>
+                                                <constraint firstItem="Olh-xO-SRY" firstAttribute="leading" secondItem="vec-Na-fZF" secondAttribute="trailing" constant="7" id="7HL-l4-38j"/>
+                                                <constraint firstItem="AhB-sd-OBa" firstAttribute="trailing" secondItem="Ob9-VF-2Vr" secondAttribute="trailingMargin" id="8Kg-tS-YVD"/>
+                                                <constraint firstItem="vec-Na-fZF" firstAttribute="leading" secondItem="Ob9-VF-2Vr" secondAttribute="leadingMargin" constant="2" id="Ef1-lJ-TpA"/>
+                                                <constraint firstItem="Olh-xO-SRY" firstAttribute="leading" secondItem="vec-Na-fZF" secondAttribute="trailing" constant="7" id="Rog-9u-Yye"/>
+                                                <constraint firstItem="Olh-xO-SRY" firstAttribute="top" secondItem="iE7-I5-D6Y" secondAttribute="bottom" constant="5" id="S70-YT-uED"/>
+                                                <constraint firstItem="AhB-sd-OBa" firstAttribute="top" secondItem="Ob9-VF-2Vr" secondAttribute="topMargin" id="bhU-Ln-4bx"/>
+                                                <constraint firstItem="Olh-xO-SRY" firstAttribute="trailing" secondItem="Ob9-VF-2Vr" secondAttribute="trailingMargin" id="dmt-14-c4O"/>
+                                                <constraint firstItem="iE7-I5-D6Y" firstAttribute="top" secondItem="AhB-sd-OBa" secondAttribute="bottom" constant="6" id="kh6-eN-HXo"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="vec-Na-fZF" secondAttribute="bottom" constant="3" id="luV-rq-Amt"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Olh-xO-SRY" secondAttribute="bottom" constant="3" id="tch-xp-4FX"/>
+                                                <constraint firstItem="AhB-sd-OBa" firstAttribute="leading" secondItem="vec-Na-fZF" secondAttribute="trailing" constant="7" id="yIj-tI-sjK"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>

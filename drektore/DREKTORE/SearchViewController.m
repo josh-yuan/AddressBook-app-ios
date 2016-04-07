@@ -132,10 +132,12 @@
     if(self.studentList.count > 0){
         NSMutableDictionary *studentInfo = [self.studentList objectAtIndex:indexPath.row];
         cell.studentPhoto.image = [UIImage imageNamed:@"placeholder.png"];
-        cell.studentName.text = studentInfo[@"firstName"];
-        
+        NSString *fullName = studentInfo[@"firstName"];
+        fullName = [fullName stringByAppendingString:@" "];
+        fullName = [fullName stringByAppendingString:studentInfo[@"lastName"]];
+        cell.studentName.text = fullName;        
         cell.studentEmail.text = studentInfo[@"email"];
-        cell.studentPhone.text = @"425-425-4255";
+        cell.studentPhone.text = studentInfo[@"phone"];
         dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul);
         // loading images asynchronously.
         dispatch_async(queue, ^{
