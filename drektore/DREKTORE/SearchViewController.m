@@ -8,7 +8,7 @@
 
 #import "SearchViewController.h"
 #import "StudentInfoCell.h"
-#define studentSearchRootURL @"http://192.168.1.11:8080/v1.0/student/name/"
+#define studentSearchRootURL @"http://192.168.1.15:8080/v1.0/student/name/"
 
 
 @interface SearchViewController ()
@@ -76,6 +76,7 @@
         }
         else if (error != nil){
             NSLog(@"The error is= %@", error);
+            //should pop up message
         }
         
     }] resume];

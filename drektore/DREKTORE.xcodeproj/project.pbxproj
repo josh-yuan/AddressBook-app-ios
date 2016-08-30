@@ -29,7 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		42470F831CB23A8900BA9F95 /* DREKTORE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DREKTORE.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		42470F831CB23A8900BA9F95 /* Drektore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Drektore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42470F871CB23A8900BA9F95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42470F881CB23A8900BA9F95 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		42470F8A1CB23A8900BA9F95 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -77,7 +77,7 @@
 		42470F841CB23A8900BA9F95 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				42470F831CB23A8900BA9F95 /* DREKTORE.app */,
+				42470F831CB23A8900BA9F95 /* Drektore.app */,
 				42470F9C1CB23A8900BA9F95 /* DREKTORETests.xctest */,
 			);
 			name = Products;
@@ -144,7 +144,7 @@
 			);
 			name = DREKTORE;
 			productName = DREKTORE;
-			productReference = 42470F831CB23A8900BA9F95 /* DREKTORE.app */;
+			productReference = 42470F831CB23A8900BA9F95 /* Drektore.app */;
 			productType = "com.apple.product-type.application";
 		};
 		42470F9B1CB23A8900BA9F95 /* DREKTORETests */ = {
@@ -176,6 +176,7 @@
 				TargetAttributes = {
 					42470F821CB23A8900BA9F95 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = 73VL8AZ2GV;
 					};
 					42470F9B1CB23A8900BA9F95 = {
 						CreatedOnToolsVersion = 6.2;
@@ -356,10 +357,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = DREKTORE/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "yuanCorp.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Drektore;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -367,10 +371,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = DREKTORE/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "yuanCorp.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Drektore;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
