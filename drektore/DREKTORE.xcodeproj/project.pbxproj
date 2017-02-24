@@ -177,9 +177,11 @@
 					42470F821CB23A8900BA9F95 = {
 						CreatedOnToolsVersion = 6.2;
 						DevelopmentTeam = 73VL8AZ2GV;
+						ProvisioningStyle = Automatic;
 					};
 					42470F9B1CB23A8900BA9F95 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = 73VL8AZ2GV;
 						TestTargetID = 42470F821CB23A8900BA9F95;
 					};
 				};
@@ -359,7 +361,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 73VL8AZ2GV;
 				INFOPLIST_FILE = DREKTORE/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "yuanCorp.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = Drektore;
@@ -373,7 +377,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 73VL8AZ2GV;
 				INFOPLIST_FILE = DREKTORE/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "yuanCorp.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = Drektore;
@@ -385,6 +391,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 73VL8AZ2GV;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -405,6 +413,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 73VL8AZ2GV;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",

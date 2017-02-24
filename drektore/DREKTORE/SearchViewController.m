@@ -8,7 +8,7 @@
 
 #import "SearchViewController.h"
 #import "StudentInfoCell.h"
-#define studentSearchRootURL @"http://192.168.1.15:8080/v1.0/student/name/"
+#define studentSearchRootURL @"http://104.199.122.125:8080/v1.0/student/name/"
 
 
 @interface SearchViewController ()
@@ -21,7 +21,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     self.searchBar.delegate = self;
-    self.searchBar.showsCancelButton = YES;
+    self.searchBar.showsCancelButton = NO;
     //self.studentTable.delegate = self;
     //self.studentTable.dataSource = self;
     self.studentTable.estimatedRowHeight = 85.0;
@@ -103,7 +103,7 @@
                 NSLog(@"total count is %lu", (unsigned long)[self.studentList count]);
         dispatch_async(dispatch_get_main_queue(), ^{
             if ([self.studentList count] <= 0){
-                [self showAlert:NSLocalizedString(@"No_match_found", @"comment") withMessage:NSLocalizedString(@"Try_another_search_term", @"comment")
+                [self showAlert:NSLocalizedString(@"No match found", @"comment") withMessage:NSLocalizedString(@"Try another search", @"comment")
                  preferredStyle:UIAlertControllerStyleAlert];
                 
             }
