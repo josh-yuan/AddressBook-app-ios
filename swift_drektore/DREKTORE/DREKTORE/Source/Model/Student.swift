@@ -7,3 +7,35 @@
 //
 
 import Foundation
+public class Student{
+    var firstName: String
+    var lastName: String
+    var phoneNumber: String
+    var email: String
+    var parentName: String
+    var grade: Int
+    var city: String
+    var zipCode: String?
+    
+    init(){
+        firstName = ""
+        lastName = ""
+        phoneNumber = ""
+        email = ""
+        parentName = ""
+        grade = 0
+        city = ""
+        zipCode = ""
+    }
+    
+    init(firstName: String, lastName: String) {
+        self.firstName = firstName
+        self.lastName = lastName
+        phoneNumber = ""
+        email = ""
+        parentName = ""
+        grade = 0
+        city = ""
+        zipCode = ""
+    }
+}
