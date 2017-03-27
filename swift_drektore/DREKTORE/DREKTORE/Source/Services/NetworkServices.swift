@@ -7,10 +7,11 @@
 //
 
 import Foundation
+let serverAddress = "http://104.199.122.125:8080/v1.0/student/name/"
 
-func searchStudents() {
+func searchStudents(withWord searchWord: String) {
     // Set up the URL request
-    let endpoint: String = "http://104.199.122.125:8080/v1.0/student/name/f"
+    let endpoint: String = serverAddress + searchWord
     guard let url = URL(string: endpoint) else {
         print("Error: cannot create URL")
         return
@@ -34,12 +35,33 @@ func searchStudents() {
         // parse the result as JSON, since that's what the API provides
         do {
 
-            guard let todo = try JSONSerialization.jsonObject(with: responseData, options: []) as? [[String:Any]] else {
+            guard let infoArray = try JSONSerialization.jsonObject(with: responseData, options: []) as? [[String:Any]] else {
                 print("error trying to convert data to JSON")
                 return
             }
             // now we have the todo, let's just print it to prove we can access it
-            print("The todo is:\(todo)")
+            print("The students info is:\(infoArray)")
+            //["parents": Curtis Frank, "city": Bellevue, "email": curtis@gmail.com, "id": 14, "address": 12115 NE 33rd ST, "phone": 425-345-9364, "grade": 7, "lastName": Frank, "firstName": John, "zipCode": 98005],
+            var students = [Student]()
+            for item in infoArray {
+                let student = Student()
+                
+                student.firstName = item["firstName"] as! String
+                print(student.firstName)
+                student.lastName = item["lastName"] as! String
+                student.parentName = item["parents"] as? String
+                student.email = item["email"] as! String
+                student.phoneNumber = item["phone"] as! String
+                student.grade = item["grade"] as! Int
+                student.address = item["address"] as? String
+                student.city = item["city"] as? String
+                student.zipCode = item["zipCode"] as? String
+                students.append(student)
+            }
+            print(students.count)
+            let sharedInstance =  DataContainer.sharedInstance
+            sharedInstance.students = students
+            
         } catch  {
             print("error trying to convert data to JSON")
             return
@@ -47,4 +69,8 @@ func searchStudents() {
     }
     
     task.resume()
+}
+
+func parseRawDataIntoSharedData (rawData input: [[String:Any]] ) {
+    
 }

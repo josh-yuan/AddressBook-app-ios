@@ -7,17 +7,18 @@
 //
 
 import Foundation
-public class Student{
+class Student {
     var firstName: String
     var lastName: String
     var phoneNumber: String
     var email: String
-    var parentName: String
+    var parentName: String?
     var grade: Int
-    var city: String
+    var city: String?
+    var address: String?
     var zipCode: String?
     
-    init(){
+    init() {
         firstName = ""
         lastName = ""
         phoneNumber = ""
@@ -37,5 +38,9 @@ public class Student{
         grade = 0
         city = ""
         zipCode = ""
+    }
+    
+    deinit {
+        
     }
 }

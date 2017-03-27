@@ -15,8 +15,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+//        if let tabBarController = window?.rootViewController as? UITabBarController {
+//            let first = SearchViewController()
+//            let second = FavoriteViewController()
+//            
+//            tabBarController.viewControllers = [first, second]
+//        }
         // Override point for customization after application launch.
-        searchStudents()
+        //searchStudents(withWord: "f")
         return true
     }
 

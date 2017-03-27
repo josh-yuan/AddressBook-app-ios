@@ -19,6 +19,8 @@ class DataContainer {
     var favorites = [Student]()
     
     //MARK: Init Array
+    init() {
+    }
     
     init( arrayStudents : [Student], arrayFavorites: [Student]) {
         students = arrayStudents
