@@ -10,7 +10,10 @@ import UIKit
 
 class StudentViewCell: UITableViewCell {
     
-    @IBOutlet weak var firstNameLabel: UILabel!
+    @IBOutlet weak var studentPhoto: UIImageView!
+    @IBOutlet weak var studenNameLabel: UILabel!
+    @IBOutlet weak var studentEmailLabel: UILabel!
+    @IBOutlet weak var studentPhoneLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -52,18 +53,83 @@
                                     <outlet property="delegate" destination="9pv-A4-QxB" id="ukH-lT-TDI"/>
                                 </connections>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="studentCell" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BOb-AB-ScI">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="studentCell" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="112" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BOb-AB-ScI">
                                 <rect key="frame" x="0.0" y="84" width="375" height="526"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="Cell" selectionStyle="default" indentationWidth="10" reuseIdentifier="studentCell" rowHeight="90" id="Y7i-ZS-bwD" customClass="StudentViewCell" customModule="DREKTORE" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="90"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StudentViewCell" rowHeight="112" id="Y7i-ZS-bwD" customClass="StudentViewCell" customModule="DREKTORE" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="112"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Y7i-ZS-bwD" id="eoT-eT-AM1">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="111.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6KI-qd-Cl7">
+                                                    <rect key="frame" x="15" y="9" width="84" height="72"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="72" id="6jD-Fx-wqu"/>
+                                                        <constraint firstAttribute="width" constant="84" id="jWG-Wm-n3W"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Student name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IDl-RE-t1d">
+                                                    <rect key="frame" x="106" y="5" width="254" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="254" id="ZD2-SG-ZYz"/>
+                                                        <constraint firstAttribute="height" constant="21" id="gr7-1r-gg5"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Student email" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lsD-qg-rKp">
+                                                    <rect key="frame" x="106" y="33" width="254" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="254" id="T3n-mJ-CsH"/>
+                                                        <constraint firstAttribute="height" constant="21" id="cAF-fw-ika"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Student phone" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9A-Du-ASz">
+                                                    <rect key="frame" x="106" y="60" width="254" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="254" id="lQc-lh-Zwg"/>
+                                                        <constraint firstAttribute="height" constant="21" id="nkC-JG-svh"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="M9A-Du-ASz" firstAttribute="top" secondItem="lsD-qg-rKp" secondAttribute="bottom" constant="6" id="2Ld-84-O9Q"/>
+                                                <constraint firstAttribute="bottom" secondItem="6KI-qd-Cl7" secondAttribute="bottom" constant="30.5" id="52x-hR-1yj"/>
+                                                <constraint firstAttribute="trailing" secondItem="IDl-RE-t1d" secondAttribute="trailing" constant="15" id="5rr-SE-DmI"/>
+                                                <constraint firstItem="lsD-qg-rKp" firstAttribute="leading" secondItem="6KI-qd-Cl7" secondAttribute="trailing" constant="7" id="BAY-SI-HWa"/>
+                                                <constraint firstItem="lsD-qg-rKp" firstAttribute="trailing" secondItem="eoT-eT-AM1" secondAttribute="trailingMargin" id="DPL-pI-3ZY"/>
+                                                <constraint firstItem="M9A-Du-ASz" firstAttribute="trailing" secondItem="eoT-eT-AM1" secondAttribute="trailingMargin" id="Mcp-54-Vmj"/>
+                                                <constraint firstItem="6KI-qd-Cl7" firstAttribute="leading" secondItem="eoT-eT-AM1" secondAttribute="leading" constant="15" id="NS4-9o-gSR"/>
+                                                <constraint firstItem="IDl-RE-t1d" firstAttribute="leading" secondItem="6KI-qd-Cl7" secondAttribute="trailing" constant="7" id="Q0w-uG-Srt"/>
+                                                <constraint firstItem="M9A-Du-ASz" firstAttribute="leading" secondItem="6KI-qd-Cl7" secondAttribute="trailing" constant="7" id="ThF-BF-kM2"/>
+                                                <constraint firstItem="6KI-qd-Cl7" firstAttribute="top" secondItem="eoT-eT-AM1" secondAttribute="top" constant="9" id="aL1-2L-DUJ"/>
+                                                <constraint firstAttribute="bottom" secondItem="6KI-qd-Cl7" secondAttribute="bottom" constant="30.5" id="fQA-09-a66"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="M9A-Du-ASz" secondAttribute="bottom" constant="20" id="gEi-Ex-Omo"/>
+                                                <constraint firstItem="6KI-qd-Cl7" firstAttribute="top" secondItem="eoT-eT-AM1" secondAttribute="top" constant="9" id="n18-vl-8du"/>
+                                                <constraint firstItem="6KI-qd-Cl7" firstAttribute="leading" secondItem="eoT-eT-AM1" secondAttribute="leading" constant="15" id="nsh-0y-oRg"/>
+                                                <constraint firstItem="lsD-qg-rKp" firstAttribute="leading" secondItem="6KI-qd-Cl7" secondAttribute="trailing" constant="7" id="nuP-ZM-DVV"/>
+                                                <constraint firstItem="lsD-qg-rKp" firstAttribute="top" secondItem="IDl-RE-t1d" secondAttribute="bottom" constant="7" id="nxj-jc-ZUe"/>
+                                                <constraint firstItem="IDl-RE-t1d" firstAttribute="top" secondItem="eoT-eT-AM1" secondAttribute="top" constant="5" id="tQZ-ib-HVT"/>
+                                                <constraint firstItem="IDl-RE-t1d" firstAttribute="leading" secondItem="6KI-qd-Cl7" secondAttribute="trailing" constant="7" id="zJ1-Z3-86N"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="studenNameLabel" destination="IDl-RE-t1d" id="UCE-PY-WFB"/>
+                                            <outlet property="studentEmailLabel" destination="lsD-qg-rKp" id="1JF-1p-7h4"/>
+                                            <outlet property="studentPhoneLabel" destination="M9A-Du-ASz" id="YfR-Mj-UJ5"/>
+                                            <outlet property="studentPhoto" destination="6KI-qd-Cl7" id="zez-nt-zOJ"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

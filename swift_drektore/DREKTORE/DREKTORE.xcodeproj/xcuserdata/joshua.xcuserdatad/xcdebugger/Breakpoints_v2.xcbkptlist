@@ -6,27 +6,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DREKTORE/Source/UI/Controller/SearchViewController.swift"
-            timestampString = "536045322.357082"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "searchBarCancelButtonClicked(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DREKTORE/Source/UI/Controller/SearchViewController.swift"
-            timestampString = "536045322.357585"
+            timestampString = "536102678.535585"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "39"
@@ -35,14 +19,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "DREKTORE.SearchViewController.refreshUI() -&gt; ()"
                   moduleName = "DREKTORE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/joshua/Josh/repo/addressbook-app-ios/swift_drektore/DREKTORE/DREKTORE/Source/UI/Controller/SearchViewController.swift"
-                  timestampString = "536045322.390025"
+                  timestampString = "536050723.543685"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "39"
@@ -50,14 +34,14 @@
                   offsetFromSymbolStart = "124">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 () -&gt; () in DREKTORE.SearchViewController.refreshUI() -&gt; ()"
                   moduleName = "DREKTORE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/joshua/Josh/repo/addressbook-app-ios/swift_drektore/DREKTORE/DREKTORE/Source/UI/Controller/SearchViewController.swift"
-                  timestampString = "536045322.393556"
+                  timestampString = "536050723.547831"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "39"
@@ -70,11 +54,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DREKTORE/Source/Services/NetworkServices.swift"
-            timestampString = "536045322.357697"
+            timestampString = "536050742.419357"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "50"

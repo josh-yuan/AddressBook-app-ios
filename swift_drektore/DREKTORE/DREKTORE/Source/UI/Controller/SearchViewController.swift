@@ -13,7 +13,7 @@ public class SearchViewController: UIViewController, UITableViewDelegate, UITabl
     var searchActive: Bool = false
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
-    
+    let sharedInstance =  DataContainer.sharedInstance
     override public func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -65,8 +65,7 @@ public class SearchViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     public func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-
-        //self.tableView.reloadData()
+        self.tableView.reloadData()
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -74,15 +73,19 @@ public class SearchViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let sharedInstance =  DataContainer.sharedInstance
         let count = sharedInstance.students.count
         print("*student count:\(count)")
         return results.count
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "studentCell")! as UITableViewCell
-        
+        let cell: StudentViewCell = tableView.dequeueReusableCell(withIdentifier: "StudentViewCell")! as UITableViewCell as! StudentViewCell
+        let index = indexPath.row
+        let currentStudent = sharedInstance.students[index]
+        cell.studentPhoto.image = UIImage(named: "placeholderYellow")
+        cell.studenNameLabel.text = currentStudent.firstName
+        cell.studentEmailLabel.text = currentStudent.email
+        cell.studentPhoneLabel.text = currentStudent.phoneNumber
         return cell
     }
 
