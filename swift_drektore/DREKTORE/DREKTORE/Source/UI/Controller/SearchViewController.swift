@@ -9,7 +9,7 @@
 import UIKit
 
 public class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
-    
+    var results = [Student]()
     var searchActive: Bool = false
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
@@ -24,6 +24,21 @@ public class SearchViewController: UIViewController, UITableViewDelegate, UITabl
         
     }
 
+    override public func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        NotificationCenter.default.addObserver(self, selector: #selector(refreshUI), name: NSNotification.Name(rawValue: "SearchResultsReceived"), object: nil)
+        
+    }
+    
+    override public func viewWillDisappear(_ animated: Bool) {
+        
+    }
+    
+    func refreshUI() {
+        results = DataContainer.sharedInstance.students
+        DispatchQueue.main.async {self.tableView.reloadData()}
+    }
+    
     public func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         searchActive = true
     }
@@ -42,7 +57,6 @@ public class SearchViewController: UIViewController, UITableViewDelegate, UITabl
         let searchInput: String = searchBar.text ?? ""
         //remove leading and trailing whitespaces
         let searchText = searchInput.trimmingCharacters(in: .whitespaces)
-        print("*\(searchText)*")
         self.searchBar.endEditing(true)
         if searchText != "" {
             searchStudents(withWord: searchText)
@@ -60,10 +74,10 @@ public class SearchViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if searchActive {
-            return 0
-        }
-        return 2//data.count
+        let sharedInstance =  DataContainer.sharedInstance
+        let count = sharedInstance.students.count
+        print("*student count:\(count)")
+        return results.count
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -78,7 +92,5 @@ public class SearchViewController: UIViewController, UITableViewDelegate, UITabl
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
 

@@ -27,7 +27,7 @@ class DataContainer {
         favorites = arrayFavorites
     }
     
-    func cleanData() {
+    func cleanup() {
         students.removeAll()
         favorites.removeAll()
     }

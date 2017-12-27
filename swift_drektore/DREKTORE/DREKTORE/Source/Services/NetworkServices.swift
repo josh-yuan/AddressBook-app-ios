@@ -7,7 +7,7 @@
 //
 
 import Foundation
-let serverAddress = "http://104.199.122.125:8080/v1.0/student/name/"
+let serverAddress = "http://192.168.1.8:8080/v1.0/student/name/"
 
 func searchStudents(withWord searchWord: String) {
     // Set up the URL request
@@ -39,8 +39,6 @@ func searchStudents(withWord searchWord: String) {
                 print("error trying to convert data to JSON")
                 return
             }
-            // now we have the todo, let's just print it to prove we can access it
-            print("The students info is:\(infoArray)")
             //["parents": Curtis Frank, "city": Bellevue, "email": curtis@gmail.com, "id": 14, "address": 12115 NE 33rd ST, "phone": 425-345-9364, "grade": 7, "lastName": Frank, "firstName": John, "zipCode": 98005],
             var students = [Student]()
             for item in infoArray {
@@ -54,13 +52,15 @@ func searchStudents(withWord searchWord: String) {
                 student.phoneNumber = item["phone"] as! String
                 student.grade = item["grade"] as! Int
                 student.address = item["address"] as? String
+                print("address:\(String(describing: student.address))")
                 student.city = item["city"] as? String
                 student.zipCode = item["zipCode"] as? String
                 students.append(student)
             }
-            print(students.count)
             let sharedInstance =  DataContainer.sharedInstance
             sharedInstance.students = students
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "SearchResultsReceived"), object: nil)
+            
             
         } catch  {
             print("error trying to convert data to JSON")
