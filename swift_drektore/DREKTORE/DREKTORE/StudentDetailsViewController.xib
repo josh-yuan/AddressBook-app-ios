@@ -39,42 +39,48 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aub-sY-Hel">
                     <rect key="frame" x="0.0" y="247" width="375" height="180"/>
                     <subviews>
-                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="425-295-8932" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="n78-Hi-Lqc">
-                            <rect key="frame" x="25" y="48" width="324" height="32"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="425-295-8932" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="n78-Hi-Lqc">
+                            <rect key="frame" x="25" y="52" width="324" height="32"/>
                             <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             <dataDetectorType key="dataDetectorTypes" phoneNumber="YES"/>
                         </textView>
-                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Email" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="okC-5G-yMI">
-                            <rect key="frame" x="25" y="90" width="324" height="32"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Email" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="okC-5G-yMI">
+                            <rect key="frame" x="25" y="94" width="324" height="32"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="32" id="svv-ip-A3e"/>
+                            </constraints>
                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences" textContentType="email"/>
                             <dataDetectorType key="dataDetectorTypes" link="YES" address="YES"/>
                         </textView>
-                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E7O-AH-nQS">
-                            <rect key="frame" x="25" y="6" width="324" height="32"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E7O-AH-nQS">
+                            <rect key="frame" x="25" y="-17" width="324" height="51"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="51" id="fVd-VL-66F"/>
+                            </constraints>
                             <attributedString key="attributedText">
                                 <fragment content="Name">
                                     <attributes>
                                         <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <font key="NSFont" metaFont="system" size="20"/>
+                                        <font key="NSFont" size="30" name=".SFNSDisplay"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                     </attributes>
                                 </fragment>
                             </attributedString>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                         </textView>
-                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="address" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6rh-wJ-h7P">
-                            <rect key="frame" x="25" y="132" width="324" height="48"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="address" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6rh-wJ-h7P">
+                            <rect key="frame" x="25" y="136" width="324" height="48"/>
                             <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="48" id="1ME-vB-PaJ"/>
+                            </constraints>
                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -83,8 +89,21 @@
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstItem="E7O-AH-nQS" firstAttribute="trailing" secondItem="n78-Hi-Lqc" secondAttribute="trailing" id="0zZ-Zf-zW1"/>
+                        <constraint firstItem="E7O-AH-nQS" firstAttribute="leading" secondItem="n78-Hi-Lqc" secondAttribute="leading" id="2q3-43-iqD"/>
+                        <constraint firstItem="6rh-wJ-h7P" firstAttribute="top" secondItem="okC-5G-yMI" secondAttribute="bottom" constant="10" id="5dK-jj-Ord"/>
+                        <constraint firstItem="E7O-AH-nQS" firstAttribute="centerX" secondItem="Aub-sY-Hel" secondAttribute="centerX" id="BCM-eO-4pZ"/>
+                        <constraint firstItem="E7O-AH-nQS" firstAttribute="leading" secondItem="6rh-wJ-h7P" secondAttribute="leading" id="ISP-wZ-Oak"/>
+                        <constraint firstItem="okC-5G-yMI" firstAttribute="top" secondItem="n78-Hi-Lqc" secondAttribute="bottom" constant="10" id="N8Y-c0-UZ4"/>
+                        <constraint firstItem="E7O-AH-nQS" firstAttribute="leading" secondItem="okC-5G-yMI" secondAttribute="leading" id="S2M-Y0-Rtx"/>
                         <constraint firstAttribute="height" constant="180" id="V7G-rl-7rA"/>
+                        <constraint firstItem="E7O-AH-nQS" firstAttribute="leading" secondItem="Aub-sY-Hel" secondAttribute="leading" constant="25" id="WvB-Gb-Y50"/>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="180" id="aXL-B3-3yZ"/>
+                        <constraint firstItem="E7O-AH-nQS" firstAttribute="top" secondItem="Aub-sY-Hel" secondAttribute="top" constant="-17" id="eY4-Ku-MwF"/>
+                        <constraint firstItem="n78-Hi-Lqc" firstAttribute="top" secondItem="E7O-AH-nQS" secondAttribute="bottom" constant="18" id="ekn-Rg-uh2"/>
+                        <constraint firstAttribute="bottom" secondItem="6rh-wJ-h7P" secondAttribute="bottom" constant="-4" id="gVj-st-39H"/>
+                        <constraint firstItem="E7O-AH-nQS" firstAttribute="trailing" secondItem="6rh-wJ-h7P" secondAttribute="trailing" id="gud-7d-3di"/>
+                        <constraint firstItem="E7O-AH-nQS" firstAttribute="trailing" secondItem="okC-5G-yMI" secondAttribute="trailing" id="tfn-Zr-vYa"/>
                     </constraints>
                 </view>
             </subviews>

@@ -66,11 +66,11 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6KI-qd-Cl7">
-                                                    <rect key="frame" x="15" y="9" width="84" height="72"/>
+                                                    <rect key="frame" x="15" y="9" width="72" height="72"/>
                                                     <color key="backgroundColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="72" id="6jD-Fx-wqu"/>
-                                                        <constraint firstAttribute="width" constant="84" id="jWG-Wm-n3W"/>
+                                                        <constraint firstAttribute="width" constant="72" id="jWG-Wm-n3W"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Student name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IDl-RE-t1d">
@@ -108,21 +108,21 @@
                                                 <constraint firstItem="M9A-Du-ASz" firstAttribute="top" secondItem="lsD-qg-rKp" secondAttribute="bottom" constant="6" id="2Ld-84-O9Q"/>
                                                 <constraint firstAttribute="bottom" secondItem="6KI-qd-Cl7" secondAttribute="bottom" constant="30.5" id="52x-hR-1yj"/>
                                                 <constraint firstAttribute="trailing" secondItem="IDl-RE-t1d" secondAttribute="trailing" constant="15" id="5rr-SE-DmI"/>
-                                                <constraint firstItem="lsD-qg-rKp" firstAttribute="leading" secondItem="6KI-qd-Cl7" secondAttribute="trailing" constant="7" id="BAY-SI-HWa"/>
+                                                <constraint firstItem="lsD-qg-rKp" firstAttribute="leading" secondItem="6KI-qd-Cl7" secondAttribute="trailing" constant="19" id="BAY-SI-HWa"/>
                                                 <constraint firstItem="lsD-qg-rKp" firstAttribute="trailing" secondItem="eoT-eT-AM1" secondAttribute="trailingMargin" id="DPL-pI-3ZY"/>
                                                 <constraint firstItem="M9A-Du-ASz" firstAttribute="trailing" secondItem="eoT-eT-AM1" secondAttribute="trailingMargin" id="Mcp-54-Vmj"/>
                                                 <constraint firstItem="6KI-qd-Cl7" firstAttribute="leading" secondItem="eoT-eT-AM1" secondAttribute="leading" constant="15" id="NS4-9o-gSR"/>
-                                                <constraint firstItem="IDl-RE-t1d" firstAttribute="leading" secondItem="6KI-qd-Cl7" secondAttribute="trailing" constant="7" id="Q0w-uG-Srt"/>
-                                                <constraint firstItem="M9A-Du-ASz" firstAttribute="leading" secondItem="6KI-qd-Cl7" secondAttribute="trailing" constant="7" id="ThF-BF-kM2"/>
+                                                <constraint firstItem="IDl-RE-t1d" firstAttribute="leading" secondItem="6KI-qd-Cl7" secondAttribute="trailing" constant="19" id="Q0w-uG-Srt"/>
+                                                <constraint firstItem="M9A-Du-ASz" firstAttribute="leading" secondItem="6KI-qd-Cl7" secondAttribute="trailing" constant="19" id="ThF-BF-kM2"/>
                                                 <constraint firstItem="6KI-qd-Cl7" firstAttribute="top" secondItem="eoT-eT-AM1" secondAttribute="top" constant="9" id="aL1-2L-DUJ"/>
                                                 <constraint firstAttribute="bottom" secondItem="6KI-qd-Cl7" secondAttribute="bottom" constant="30.5" id="fQA-09-a66"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="M9A-Du-ASz" secondAttribute="bottom" constant="20" id="gEi-Ex-Omo"/>
                                                 <constraint firstItem="6KI-qd-Cl7" firstAttribute="top" secondItem="eoT-eT-AM1" secondAttribute="top" constant="9" id="n18-vl-8du"/>
                                                 <constraint firstItem="6KI-qd-Cl7" firstAttribute="leading" secondItem="eoT-eT-AM1" secondAttribute="leading" constant="15" id="nsh-0y-oRg"/>
-                                                <constraint firstItem="lsD-qg-rKp" firstAttribute="leading" secondItem="6KI-qd-Cl7" secondAttribute="trailing" constant="7" id="nuP-ZM-DVV"/>
+                                                <constraint firstItem="lsD-qg-rKp" firstAttribute="leading" secondItem="6KI-qd-Cl7" secondAttribute="trailing" constant="19" id="nuP-ZM-DVV"/>
                                                 <constraint firstItem="lsD-qg-rKp" firstAttribute="top" secondItem="IDl-RE-t1d" secondAttribute="bottom" constant="7" id="nxj-jc-ZUe"/>
                                                 <constraint firstItem="IDl-RE-t1d" firstAttribute="top" secondItem="eoT-eT-AM1" secondAttribute="top" constant="5" id="tQZ-ib-HVT"/>
-                                                <constraint firstItem="IDl-RE-t1d" firstAttribute="leading" secondItem="6KI-qd-Cl7" secondAttribute="trailing" constant="7" id="zJ1-Z3-86N"/>
+                                                <constraint firstItem="IDl-RE-t1d" firstAttribute="leading" secondItem="6KI-qd-Cl7" secondAttribute="trailing" constant="19" id="zJ1-Z3-86N"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
