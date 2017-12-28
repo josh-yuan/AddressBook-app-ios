@@ -23,7 +23,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            tabBarController.viewControllers = [first, second]
 //        }
         // Override point for customization after application launch.
-        //searchStudents(withWord: "f")
+        
+//        let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SearchViewController") as UIViewController
+//        let navigationController = UINavigationController(rootViewController: viewController)
+//        self.window = UIWindow(frame: UIScreen.main.bounds)
+//        self.window?.rootViewController = navigationController
+//        self.window?.makeKeyAndVisible()
         return true
     }
 

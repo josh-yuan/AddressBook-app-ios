@@ -17,6 +17,8 @@
 		4244BDF01E6CE44600445AB2 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4244BDEF1E6CE44600445AB2 /* Student.swift */; };
 		4244BDF31E6CEBA300445AB2 /* DataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4244BDF21E6CEBA300445AB2 /* DataContainer.swift */; };
 		4244BDF61E6D1A4100445AB2 /* NetworkServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4244BDF51E6D1A4100445AB2 /* NetworkServices.swift */; };
+		424713941FF44EDA00AA71AC /* StudentDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424713921FF44EDA00AA71AC /* StudentDetailsViewController.swift */; };
+		424713951FF44EDA00AA71AC /* StudentDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 424713931FF44EDA00AA71AC /* StudentDetailsViewController.xib */; };
 		42B7F4351E73E18600AD47B6 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B7F4331E73E18600AD47B6 /* FavoriteViewController.swift */; };
 		42B7F4361E73E18700AD47B6 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B7F4341E73E18600AD47B6 /* SearchViewController.swift */; };
 		42B7F4391E762E8A00AD47B6 /* StudentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B7F4381E762E8A00AD47B6 /* StudentCell.swift */; };
@@ -56,6 +58,8 @@
 		4244BDEF1E6CE44600445AB2 /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Student.swift; path = Source/Model/Student.swift; sourceTree = "<group>"; };
 		4244BDF21E6CEBA300445AB2 /* DataContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataContainer.swift; path = Source/Model/DataContainer.swift; sourceTree = "<group>"; };
 		4244BDF51E6D1A4100445AB2 /* NetworkServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkServices.swift; path = Source/Services/NetworkServices.swift; sourceTree = "<group>"; };
+		424713921FF44EDA00AA71AC /* StudentDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentDetailsViewController.swift; sourceTree = "<group>"; };
+		424713931FF44EDA00AA71AC /* StudentDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StudentDetailsViewController.xib; sourceTree = "<group>"; };
 		42B7F4331E73E18600AD47B6 /* FavoriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavoriteViewController.swift; path = Source/UI/Controller/FavoriteViewController.swift; sourceTree = "<group>"; };
 		42B7F4341E73E18600AD47B6 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = Source/UI/Controller/SearchViewController.swift; sourceTree = "<group>"; };
 		42B7F4381E762E8A00AD47B6 /* StudentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StudentCell.swift; path = Source/UI/View/StudentCell.swift; sourceTree = "<group>"; };
@@ -115,6 +119,7 @@
 				4244BDF71E6D1A7900445AB2 /* Services */,
 				4244BDF11E6CEB5B00445AB2 /* Model */,
 				4244BD811E6A6A5C00445AB2 /* Main.storyboard */,
+				424713931FF44EDA00AA71AC /* StudentDetailsViewController.xib */,
 				4244BD841E6A6A5C00445AB2 /* Assets.xcassets */,
 				4244BDAB1E6A6DA600445AB2 /* Images.xcassets */,
 				4244BD861E6A6A5C00445AB2 /* LaunchScreen.storyboard */,
@@ -163,6 +168,7 @@
 			children = (
 				42B7F4341E73E18600AD47B6 /* SearchViewController.swift */,
 				42B7F4331E73E18600AD47B6 /* FavoriteViewController.swift */,
+				424713921FF44EDA00AA71AC /* StudentDetailsViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -287,6 +293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4244BD881E6A6A5C00445AB2 /* LaunchScreen.storyboard in Resources */,
+				424713951FF44EDA00AA71AC /* StudentDetailsViewController.xib in Resources */,
 				4244BDAC1E6A6DA600445AB2 /* Images.xcassets in Resources */,
 				4244BD851E6A6A5C00445AB2 /* Assets.xcassets in Resources */,
 				4244BD831E6A6A5C00445AB2 /* Main.storyboard in Resources */,
@@ -319,6 +326,7 @@
 				4244BDF01E6CE44600445AB2 /* Student.swift in Sources */,
 				4244BDF61E6D1A4100445AB2 /* NetworkServices.swift in Sources */,
 				4244BDF31E6CEBA300445AB2 /* DataContainer.swift in Sources */,
+				424713941FF44EDA00AA71AC /* StudentDetailsViewController.swift in Sources */,
 				42B7F4351E73E18600AD47B6 /* FavoriteViewController.swift in Sources */,
 				42B7F4391E762E8A00AD47B6 /* StudentCell.swift in Sources */,
 			);

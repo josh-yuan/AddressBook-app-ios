@@ -17,11 +17,11 @@ public class SearchViewController: UIViewController, UITableViewDelegate, UITabl
     override public func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
         /* Setup delegates */
         tableView.delegate = self
         tableView.dataSource = self
         searchBar.delegate = self
-        
     }
 
     override public func viewWillAppear(_ animated: Bool) {
@@ -83,14 +83,19 @@ public class SearchViewController: UIViewController, UITableViewDelegate, UITabl
         let index = indexPath.row
         let currentStudent = sharedInstance.students[index]
         cell.studentPhoto.image = UIImage(named: "placeholderYellow")
-        cell.studenNameLabel.text = currentStudent.firstName
+        cell.studenNameLabel.text = currentStudent.firstName + " " + currentStudent.lastName
         cell.studentEmailLabel.text = currentStudent.email
         cell.studentPhoneLabel.text = currentStudent.phoneNumber
         return cell
     }
 
-    
-    
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let destination = StudentDetailsViewController()
+        let selectedStudent = sharedInstance.students[indexPath.row]
+        navigationController?.pushViewController(destination, animated: true)
+        destination.studentInfo = selectedStudent
+    }
+
     override public func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
