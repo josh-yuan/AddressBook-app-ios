@@ -20,10 +20,10 @@ class StudentDetailsViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         photo.image = UIImage(named: "placeholderYellow")
-        studentName.text = "Name: " + (studentInfo?.firstName)! + " " +  (studentInfo?.lastName)!
-        phone.text = "Phone: " + (studentInfo?.phoneNumber)!
-        email.text = "Email: " + (studentInfo?.email)!
-        address.text = "Address: " + (studentInfo?.address)!
+        studentName.text = (studentInfo?.firstName)! + " " +  (studentInfo?.lastName)!
+        phone.text = (studentInfo?.phoneNumber)!
+        email.text = (studentInfo?.email)!
+        address.text = (studentInfo?.address)!
 
     }
 
