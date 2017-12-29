@@ -78,11 +78,14 @@ public class SearchViewController: UIViewController, UITableViewDelegate, UITabl
         return results.count
     }
     
-    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath:
+        IndexPath) -> UITableViewCell {
         let cell: StudentViewCell = tableView.dequeueReusableCell(withIdentifier: "StudentViewCell")! as UITableViewCell as! StudentViewCell
         let index = indexPath.row
         let currentStudent = sharedInstance.students[index]
         cell.studentPhoto.image = UIImage(named: "placeholderYellow")
+        cell.studentPhoto.layer.cornerRadius = 5.0
+        cell.studentPhoto.clipsToBounds = true
         cell.studenNameLabel.text = currentStudent.firstName + " " + currentStudent.lastName
         cell.studentEmailLabel.text = currentStudent.email
         cell.studentPhoneLabel.text = currentStudent.phoneNumber
@@ -94,6 +97,7 @@ public class SearchViewController: UIViewController, UITableViewDelegate, UITabl
         let selectedStudent = sharedInstance.students[indexPath.row]
         navigationController?.pushViewController(destination, animated: true)
         destination.studentInfo = selectedStudent
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 
     override public func didReceiveMemoryWarning() {

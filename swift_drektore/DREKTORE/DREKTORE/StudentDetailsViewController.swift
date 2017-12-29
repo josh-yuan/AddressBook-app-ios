@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import MessageUI
 
-class StudentDetailsViewController: UIViewController {
+class StudentDetailsViewController: UIViewController, MFMessageComposeViewControllerDelegate {
     @IBOutlet weak var photo: UIImageView!
     @IBOutlet weak var studentName: UITextView!
     @IBOutlet weak var phone: UITextView!
@@ -24,16 +25,36 @@ class StudentDetailsViewController: UIViewController {
         phone.text = (studentInfo?.phoneNumber)!
         email.text = (studentInfo?.email)!
         address.text = (studentInfo?.address)!
-
+        
+        photo.layer.cornerRadius = 10.0
+        photo.clipsToBounds = true
+    }
+    
+    @IBAction func sendMSG(_ sender: Any) {
+        sendSMSText(phoneNumber: phone.text)
+    }
+    func sendSMSText(phoneNumber: String) {
+        if (MFMessageComposeViewController.canSendText()) {
+            let controller = MFMessageComposeViewController()
+            controller.body = ""
+            controller.recipients = [phoneNumber]
+            controller.messageComposeDelegate = self
+            self.present(controller, animated: true, completion: nil)
+        }
+    }
+    
+    func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
+        //... handle sms screen actions
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    public func showInfo() {
-        
     }
 
     /*
