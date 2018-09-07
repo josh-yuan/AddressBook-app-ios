@@ -31,10 +31,9 @@ public class SearchViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     override public func viewWillDisappear(_ animated: Bool) {
-        
     }
     
-    func refreshUI() {
+    @objc func refreshUI() {
         results = DataContainer.sharedInstance.students
         DispatchQueue.main.async {self.tableView.reloadData()}
     }
@@ -58,6 +57,7 @@ public class SearchViewController: UIViewController, UITableViewDelegate, UITabl
         //remove leading and trailing whitespaces
         let searchText = searchInput.trimmingCharacters(in: .whitespaces)
         self.searchBar.endEditing(true)
+        print("searchText*\(searchText)")
         if searchText != "" {
             searchStudents(withWord: searchText)
             //send request

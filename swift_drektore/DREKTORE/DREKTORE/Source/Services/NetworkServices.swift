@@ -7,17 +7,18 @@
 //
 
 import Foundation
-let serverAddress = "http://192.168.1.8:8080/v1.0/student/name/"
+let serverAddress = "http://localhost:8080/v1.0/student/name/"
+//"http://192.168.1.8:8080/v1.0/student/name/"
 
 func searchStudents(withWord searchWord: String) {
     // Set up the URL request
     let endpoint: String = serverAddress + searchWord
+    print("endpoint*\(endpoint)")
     guard let url = URL(string: endpoint) else {
         print("Error: cannot create URL")
         return
     }
     let urlRequest = URLRequest(url: url)
-    
     // make the request
     let task = URLSession.shared.dataTask(with: urlRequest as URLRequest) {
         (data, response, error) in
@@ -41,6 +42,7 @@ func searchStudents(withWord searchWord: String) {
             }
             //["parents": Curtis Frank, "city": Bellevue, "email": curtis@gmail.com, "id": 14, "address": 12115 NE 33rd ST, "phone": 425-345-9364, "grade": 7, "lastName": Frank, "firstName": John, "zipCode": 98005],
             var students = [Student]()
+            print(students)
             for item in infoArray {
                 let student = Student()
                 

@@ -8,7 +8,7 @@
 
 #import "SearchViewController.h"
 #import "StudentInfoCell.h"
-#define studentSearchRootURL @"http://104.199.122.125:8080/v1.0/student/name/"
+#define studentSearchRootURL @"http://192.168.1.8:8080/v1.0/student/name/"
 
 
 @interface SearchViewController ()
@@ -130,7 +130,7 @@
     static NSString *identifier = @"StudentInfoCell";
     StudentInfoCell *cell = [self.studentTable dequeueReusableCellWithIdentifier:identifier];
     [cell setSelectionStyle:UITableViewCellSelectionStyleDefault];
-    if(self.studentList.count > 0){
+    if(self.studentList.count > 0) {
         NSMutableDictionary *studentInfo = [self.studentList objectAtIndex:indexPath.row];
         cell.studentPhoto.image = [UIImage imageNamed:@"placeholder.png"];
         NSString *fullName = studentInfo[@"firstName"];

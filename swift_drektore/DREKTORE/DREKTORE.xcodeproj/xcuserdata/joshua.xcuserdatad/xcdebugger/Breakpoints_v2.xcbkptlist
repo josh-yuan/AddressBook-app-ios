@@ -6,63 +6,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DREKTORE/Source/UI/Controller/SearchViewController.swift"
-            timestampString = "536222102.01192"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "refreshUI()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DREKTORE.SearchViewController.refreshUI() -&gt; ()"
-                  moduleName = "DREKTORE"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/joshua/Josh/repo/addressbook-app-ios/swift_drektore/DREKTORE/DREKTORE/Source/UI/Controller/SearchViewController.swift"
-                  timestampString = "536050723.543685"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "39"
-                  endingLineNumber = "39"
-                  offsetFromSymbolStart = "124">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in DREKTORE.SearchViewController.refreshUI() -&gt; ()"
-                  moduleName = "DREKTORE"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/joshua/Josh/repo/addressbook-app-ios/swift_drektore/DREKTORE/DREKTORE/Source/UI/Controller/SearchViewController.swift"
-                  timestampString = "536050723.547831"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "39"
-                  endingLineNumber = "39"
-                  offsetFromSymbolStart = "21">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DREKTORE/Source/Services/NetworkServices.swift"
-            timestampString = "536050742.419357"
+            timestampString = "557966730.1277961"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
             landmarkName = "searchStudents(withWord:)"
             landmarkType = "9">
          </BreakpointContent>
